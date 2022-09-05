@@ -9,13 +9,3 @@ impl TrimNewlineExt for String {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn trim_newline_test() {
-        let result = String::from("asdf\n\n\r\n").trim_newline().to_string();
-        assert_eq!(result, "asdf");
-    }
-}

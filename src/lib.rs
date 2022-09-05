@@ -1,4 +1,3 @@
-
 mod seblog;
 #[cfg(test)]
 mod tests {
@@ -16,5 +15,11 @@ mod tests {
         handle.debug("Debug message");
         handle.trace("Tracing!");
         std::thread::sleep(std::time::Duration::from_micros(50));
+    }
+
+    #[test]
+    fn trim_newline_test() {
+        let result = String::from("asdf\n\n\r\n").trim_newline().to_string();
+        assert_eq!(result, "asdf");
     }
 }
