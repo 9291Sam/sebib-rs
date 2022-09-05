@@ -1,7 +1,9 @@
 mod seblog;
+mod string;
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use crate::seblog;
+    use crate::string::TrimNewlineExt;
 
     #[test]
     fn test_seblog() {

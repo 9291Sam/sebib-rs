@@ -8,4 +8,3 @@ impl TrimNewlineExt for String {
         self.trim_end_matches(NEWLINES)
     }
 }
-
